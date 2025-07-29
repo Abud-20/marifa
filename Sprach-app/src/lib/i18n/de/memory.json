@@ -1,0 +1,20 @@
+{
+  "title": "Memory-Spiel",
+  "subtitle": "Finde die passenden Paare!",
+  "score": "Punktzahl",
+  "moves": "Züge",
+  "time": "Zeit",
+  "restart": "Neustart",
+  "reset": "Zurücksetzen",
+  "back": "Zurück zur Startseite",
+  "congratulations": "Glückwunsch!",
+  "gameComplete": "Spiel beendet!",
+  "playAgain": "Nochmal spielen",
+  "bestScore": "Beste Punktzahl",
+  "newGame": "Neues Spiel",
+  "instructions": "Finde alle Paare!",
+  "level": "Level",
+  "easy": "Einfach",
+  "medium": "Mittel",
+  "hard": "Schwer"
+} 

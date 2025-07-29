@@ -1,10 +1,8 @@
-import { AllowedLocales, Locale, I18NConfig } from "@/lib/types";
+export const defaultLocale = "de";
 
-export const defaultLocale = "en";
+export const allowedLocales = [defaultLocale, "ar"];
 
-export const allowedLocales: AllowedLocales = [defaultLocale, "ar"];
-
-const i18nConfig: I18NConfig = {
+const i18nConfig = {
   locales: allowedLocales,
   defaultLocale,
   prefixDefault: false, // avoids prefixing the default locale in URLs

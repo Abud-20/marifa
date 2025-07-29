@@ -1,0 +1,15 @@
+{
+  "login": "تسجيل الدخول",
+  "register": "التسجيل",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "name": "الاسم",
+  "repeatPassword": "تأكيد كلمة المرور",
+  "rememberMe": "تذكرني",
+  "noAccount": "ليس لديك حساب؟",
+  "registerHere": "سجل الآن",
+  "hasAccount": "لديك حساب بالفعل؟",
+  "backToLogin": "العودة لتسجيل الدخول",
+  "loginButton": "تسجيل الدخول",
+  "registerButton": "التسجيل"
+} 

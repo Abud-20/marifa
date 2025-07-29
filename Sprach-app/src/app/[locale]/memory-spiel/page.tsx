@@ -1,47 +1,16 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import { getTranslations } from '@/lib/i18n/translations';
+import { Locale } from '@/lib/types';
 
-const translations = {
-  de: {
-    title: "Memory-Spiel",
-    moves: "Züge",
-    reset: "Zurücksetzen",
-    congratulations: "Glückwunsch!",
-    gameComplete: "Spiel beendet!",
-    playAgain: "Nochmal spielen",
-    score: "Punktzahl",
-    time: "Zeit",
-    bestScore: "Beste Punktzahl",
-    newGame: "Neues Spiel",
-    instructions: "Finde alle Paare!",
-    level: "Level",
-    easy: "Einfach",
-    medium: "Mittel",
-    hard: "Schwer"
-  },
-  ar: {
-    title: "لعبة الذاكرة",
-    moves: "عدد المحاولات",
-    reset: "إعادة البدء",
-    congratulations: "تهانينا!",
-    gameComplete: "انتهت اللعبة!",
-    playAgain: "العب مرة أخرى",
-    score: "النقاط",
-    time: "الوقت",
-    bestScore: "أفضل نتيجة",
-    newGame: "لعبة جديدة",
-    instructions: "اعثر على جميع الأزواج!",
-    level: "المستوى",
-    easy: "سهل",
-    medium: "متوسط",
-    hard: "صعب"
-  }
+type MemoryGameProps = {
+  params: Promise<{ locale: Locale }>;
 };
 
-export default function MemoryGame() {
-  const [lang, setLang] = useState<'de' | 'ar'>('de');
-  const t = translations[lang];
+export default function MemoryGame({ params }: MemoryGameProps) {
+  const [locale, setLocale] = useState<Locale>('de');
+  const t = getTranslations(locale, 'memory') as Record<string, string>;
   
   // Bildpfade statt Emojis
   const images = [
@@ -141,10 +110,10 @@ export default function MemoryGame() {
           {t.reset}
         </button>
         <button 
-          onClick={() => setLang(lang === 'de' ? 'ar' : 'de')} 
+          onClick={() => setLocale(locale === 'de' ? 'ar' : 'de')} 
           className="px-4 py-2 bg-white text-purple-600 rounded-md font-bold text-base sm:text-lg"
         >
-          {lang === 'de' ? 'العربية' : 'Deutsch'}
+          {locale === 'de' ? 'العربية' : 'Deutsch'}
         </button>
       </div>
     </div>

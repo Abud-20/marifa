@@ -1,0 +1,15 @@
+{
+  "login": "Anmelden",
+  "register": "Registrieren",
+  "email": "E-Mail",
+  "password": "Passwort",
+  "name": "Name",
+  "repeatPassword": "Passwort wiederholen",
+  "rememberMe": "Angemeldet bleiben",
+  "noAccount": "Du hast kein Konto?",
+  "registerHere": "Registrieren",
+  "hasAccount": "Schon ein Konto?",
+  "backToLogin": "Zurück zum Login",
+  "loginButton": "Anmelden",
+  "registerButton": "Registrieren"
+} 
