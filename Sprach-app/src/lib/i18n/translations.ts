@@ -41,4 +41,20 @@ export function getTranslations(locale: Locale, section: keyof typeof translatio
 export function getTranslation(locale: Locale, section: keyof typeof translations.de, key: string) {
   const sectionTranslations = translations[locale][section] as Record<string, string>;
   return sectionTranslations[key] || key;
+}
+
+export function getTranslationObject(locale: Locale, section: keyof typeof translations.de, key: string) {
+  const sectionTranslations = translations[locale][section] as Record<string, any>;
+  const keys = key.split('.');
+  let result = sectionTranslations;
+  
+  for (const k of keys) {
+    if (result && typeof result === 'object' && k in result) {
+      result = result[k];
+    } else {
+      return null;
+    }
+  }
+  
+  return result;
 } 

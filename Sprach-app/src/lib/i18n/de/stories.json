@@ -1,10 +1,12 @@
 {
   "title": "Geschichten",
   "subtitle": "Entdecke spannende Geschichten und lerne dabei Deutsch",
-  "story1": "Die kleine Katze",
-  "story2": "Der Apfelbaum",
-  "story3": "Das Abenteuer im Garten",
-  "story4": "Die Farben des Regenbogens",
+  "story1": "Anna und die Katze",
+  "story2": "Tom kauft ein",
+  "story3": "Lisa und das Wetter",
+  "story4": "Der Apfelbaum",
+  "story5": "Das Abenteuer im Garten",
+  "story6": "Die Farben des Regenbogens",
   "readStory": "Geschichte lesen",
   "listenStory": "Geschichte hören",
   "practiceWords": "Wörter üben",
@@ -12,5 +14,234 @@
   "level": "Schwierigkeitsgrad",
   "easy": "Einfach",
   "medium": "Mittel",
-  "hard": "Schwer"
+  "hard": "Schwer",
+  "easyStories": "Einfache Geschichten",
+  "mediumStories": "Mittlere Geschichten",
+  "hardStories": "Schwere Geschichten",
+  "startTest": "Test starten",
+  "test": "Test",
+  "question": "Frage",
+  "correct": "Richtig!",
+  "wrong": "Falsch!",
+  "testResult": "Testergebnis",
+  "perfect": "Perfekt! Alle Antworten richtig!",
+  "goodJob": "Gut gemacht! Übe weiter!",
+  "tryAgain": "Nochmal versuchen",
+  "nextStory": "Nächste Geschichte",
+  "backToStories": "Zurück zu Geschichten",
+  "clickToRead": "Klicke um zu lesen",
+  "readingProgress": "Lesefortschritt",
+  "stories": {
+    "anna": {
+      "title": "Anna und die Katze",
+      "paragraphs": [
+        "Anna ist neu in Berlin. Sie hat eine Katze, Max. Max ist schwarz und weiß.",
+        "Anna geht in den Park. Max folgt ihr.",
+        "\"Max, komm hierher!\" ruft Anna.",
+        "Max springt auf eine Bank und schläft.",
+        "Anna sucht ihn. \"Wo bist du, Max?\"",
+        "Max miaut leise. Anna findet ihn auf der Bank.",
+        "\"Da bist du!\" sagt Anna. Sie ist glücklich."
+      ],
+      "questions": [
+        {
+          "question": "Was hat Anna?",
+          "options": ["einen Hund", "eine Katze", "einen Vogel"],
+          "correct": 1
+        },
+        {
+          "question": "Wo geht Anna?",
+          "options": ["ins Kino", "in den Park", "nach Hause"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Farbe hat Max?",
+          "options": ["schwarz und weiß", "braun", "grau"],
+          "correct": 0
+        }
+      ]
+    },
+    "tom": {
+      "title": "Tom kauft ein",
+      "paragraphs": [
+        "Tom braucht Äpfel. Er geht in den Supermarkt.",
+        "\"Guten Tag!\" sagt die Frau an der Kasse.",
+        "Tom nimmt fünf rote Äpfel und eine Flasche Wasser.",
+        "\"Das macht 3 Euro 50\", sagt die Frau.",
+        "Tom bezahlt und sagt \"Danke!\"",
+        "Er geht nach Hause und isst einen Apfel."
+      ],
+      "questions": [
+        {
+          "question": "Was kauft Tom?",
+          "options": ["Brot", "Äpfel und Wasser", "Milch"],
+          "correct": 1
+        },
+        {
+          "question": "Wie viel kostet alles?",
+          "options": ["2 Euro", "3 Euro 50", "4 Euro"],
+          "correct": 1
+        },
+        {
+          "question": "Was macht Tom zuletzt?",
+          "options": ["Er schläft.", "Er trinkt Kaffee.", "Er isst einen Apfel."],
+          "correct": 2
+        }
+      ]
+    },
+    "lisa": {
+      "title": "Lisa und das Wetter",
+      "paragraphs": [
+        "Lisa schaut aus dem Fenster.",
+        "\"Heute ist es kalt und regnet\", sagt sie.",
+        "Sie zieht einen Mantel und nimmt einen Regenschirm.",
+        "Lisa geht zur Schule.",
+        "Unterwegs trifft sie ihren Freund Tim.",
+        "\"Hallo Lisa, ist es warm?\" fragt Tim.",
+        "\"Nein, es ist kalt und nass!\" antwortet Lisa.",
+        "Beide lachen und gehen gemeinsam zur Schule."
+      ],
+      "questions": [
+        {
+          "question": "Wie ist das Wetter?",
+          "options": ["Kalt und regnet", "Sonnig", "Warm"],
+          "correct": 0
+        },
+        {
+          "question": "Was trägt Lisa?",
+          "options": ["einen Hut", "einen Mantel und Regenschirm", "Shorts"],
+          "correct": 1
+        },
+        {
+          "question": "Wen trifft Lisa?",
+          "options": ["ihre Schwester", "ihren Freund Tim", "ihre Lehrerin"],
+          "correct": 1
+        }
+      ]
+    },
+    "annaFahrrad": {
+      "title": "Anna und das rote Fahrrad",
+      "paragraphs": [
+        "Anna ist vierzehn Jahre alt und lebt in einem kleinen Dorf zwischen grünen Wiesen und hohen Bäumen.",
+        "Jeden Morgen steht sie um sieben Uhr auf. Sie frühstückt Brot mit Marmelade und trinkt eine Tasse Kakao.",
+        "Dann läuft sie zur Bushaltestelle. Der Bus kommt um halb acht und fährt sie zur Schule in der nächsten Stadt.",
+        "Der Weg dauert 45 Minuten. Anna schaut aus dem Fenster und träumt. Sie träumt von Freiheit und von einem roten Fahrrad.",
+        "Seit drei Monaten schaut Anna in den Schaufenstern vorbei. Im Fahrradladen steht ein rotes Fahrrad. Es ist schön und neu.",
+        "Die Farbe ist feuerrot, und die Reifen sind groß und schwarz. Ein kleiner Korb ist vorne am Lenker.",
+        "Anna stellt sich vor: \"Mit diesem Fahrrad fahre ich zur Schule – schnell und frei!\" Aber das Fahrrad kostet 120 Euro.",
+        "Anna hat nur 80 Euro auf ihrem Sparbuch. Sie ist traurig.",
+        "Anna spricht mit ihrer Mutter. \"Mama, ich möchte das rote Fahrrad kaufen, aber ich habe nicht genug Geld.\"",
+        "Die Mutter sagt: \"Du kannst arbeiten und Geld verdienen.\" Anna denkt nach. Sie kann Babysitten, Gras schneiden oder Blumen pflanzen.",
+        "Sie geht zu ihrer Nachbarin Frau Schmidt.",
+        "Frau Schmidt ist sechzig Jahre alt und hat einen großen Garten.",
+        "\"Guten Tag, Frau Schmidt. Ich möchte arbeiten. Ich brauche 40 Euro für mein Fahrrad.\"",
+        "Frau Schmidt lächelt: \"Gut! Du kannst vier Stunden im Garten helfen.\"",
+        "Anna nimmt die Schere und die Handschuhe. Sie schneidet hohes Gras und pflanzt bunte Blumen.",
+        "Die Sonne scheint, und Anna schwitzt. Nach vier Stunden ist der Garten schön und sauber.",
+        "Frau Schmidt gibt Anna 40 Euro.",
+        "Anna läuft schnell zum Fahrradladen. Der Verkäufer ist freundlich.",
+        "\"Ich möchte das rote Fahrrad kaufen.\" Anna zählt: \"80 Euro von meinem Sparbuch und 40 Euro vom Garten – das sind 120 Euro!\"",
+        "Der Mann lacht: \"Perfekt! Das Fahrrad ist jetzt dein!\" Anna ist glücklich.",
+        "Sie fährt sofort nach Hause. Die Mutter sieht aus dem Fenster und winkt. Anna ruft: \"Ich habe es geschafft!\"",
+        "Jeden Morgen fährt Anna mit ihrem roten Fahrrad zur Schule. Der Weg dauert nur 20 Minuten, und sie singt dabei.",
+        "Anna lernt: \"Wenn man hart arbeitet, kann man seine Träume erfüllen.\""
+      ],
+      "questions": [
+        {
+          "question": "Wie alt ist Anna?",
+          "options": ["zwölf Jahre", "vierzehn Jahre", "sechzehn Jahre"],
+          "correct": 1
+        },
+        {
+          "question": "Was kostet das rote Fahrrad?",
+          "options": ["100 Euro", "120 Euro", "140 Euro"],
+          "correct": 1
+        },
+        {
+          "question": "Wie viel Geld hat Anna auf ihrem Sparbuch?",
+          "options": ["60 Euro", "80 Euro", "100 Euro"],
+          "correct": 1
+        },
+        {
+          "question": "Wie viel Geld verdient Anna bei Frau Schmidt?",
+          "options": ["30 Euro", "40 Euro", "50 Euro"],
+          "correct": 1
+        },
+        {
+          "question": "Wie lange dauert der Schulweg mit dem Fahrrad?",
+          "options": ["15 Minuten", "20 Minuten", "25 Minuten"],
+          "correct": 1
+        },
+        {
+          "question": "Was lernt Anna am Ende der Geschichte?",
+          "options": ["Fahrradfahren ist schwer", "Geld sparen ist wichtig", "Wenn man hart arbeitet, kann man seine Träume erfüllen"],
+          "correct": 2
+        }
+      ]
+    },
+    "stimmeMeer": {
+      "title": "Die Stimme des Meeres",
+      "paragraphs": [
+        "Lena stand am Strand von Malaga und schaute auf das unruhige Mittelmeer.",
+        "Seit drei Monaten arbeitete sie als Sprachassistentin an einer deutschen Schule in Spanien, doch heute hatte sie einen schweren Tag hinter sich. Ihre Schüler hatten eine Klassenarbeit geschrieben, und die Ergebnisse waren enttäuschend.",
+        "\"Ich bin hier, um ihnen zu helfen, aber manchmal fühle ich mich so nutzlos\", murmelte sie in den Wind.",
+        "Als sie entlang des Paseo Marítimo spazierte, entdeckte sie eine Flaschenpost zwischen den Steinen.",
+        "In der Flasche steckte ein zusammengefaltetes Blatt, beschrieben mit Tinte und Salzspuren:",
+        "\"Wenn du dies liest, bist du bereit für deine wahre Reise. Folge dem Leuchtturm bis zum alten Fischereihafen. Dort wartet jemand, der dich versteht.\"",
+        "Lena lachte nervös. \"Das ist doch verrückt… oder?\" Doch etwas in ihr sagte: \"Geh hin.\"",
+        "Am Hafen roch es nach Salz und frischem Fisch. Alte Männer reparierten Netze, während Kinder Muscheln sammelten.",
+        "Lena fragte eine Fischerin namens Marisol, ob sie die Nachricht geschrieben hatte.",
+        "Marisol lächelte rätselhaft: \"Die Flasche? Die kommt von La Voz del Mar – der Stimme des Meeres. Manche Menschen hören sie, wenn sie ganz still sind.\"",
+        "Marisol führte Lena zu einem versteckten Boot. Sie rudelten aus dem Hafen hinaus, bis nur noch Wellen und Möwen zu hören waren.",
+        "\"Schließe die Augen und atme tief\", sagte Marisol. Lena gehorchte.",
+        "Und plötzlich hörte sie es: Nicht mit den Ohren, sondern mit dem Herzen. Das Meer sprach zu ihr – nicht in Worten, sondern in Gefühlen.",
+        "Es sagte: \"Du bist nicht hier, um perfekt zu sein. Du bist hier, um zu wachsen.\"",
+        "Als Lena zurückkam, war ihr Blick klarer. Am nächsten Tag änderte sie ihren Unterricht.",
+        "Statt Grammatiktests, sang sie mit den Schülern und erzählte Geschichten. Die Kinder lächelten wieder.",
+        "Und Lena? Sie verstand, dass Perfektion nicht das Ziel war. Verbindung war es."
+      ],
+      "questions": [
+        {
+          "question": "Was ist Lenas Job in Spanien?",
+          "options": ["Sie ist Touristin", "Sie arbeitet als Sprachassistentin", "Sie ist Fischerin"],
+          "correct": 1
+        },
+        {
+          "question": "Warum ist Lena traurig?",
+          "options": ["Ihre Schüler haben schlechte Noten geschrieben", "Sie hat ihr Handy verloren", "Das Meer ist zu laut"],
+          "correct": 0
+        },
+        {
+          "question": "Was findet Lena am Strand?",
+          "options": ["Einen Schatz", "Eine Flaschenpost", "Einen neuen Schuh"],
+          "correct": 1
+        },
+        {
+          "question": "Wer bringt Lena mit dem Boot raus aufs Meer?",
+          "options": ["Marisol", "Ein Fremder", "Ihre Mutter"],
+          "correct": 0
+        },
+        {
+          "question": "Was versteht Lena am Ende der Geschichte?",
+          "options": ["Das Meer ist gefährlich", "Verbindung ist wichtiger als Perfektion", "Sie sollte nach Hause gehen"],
+          "correct": 1
+        },
+        {
+          "question": "Wie ändert Lena ihren Unterricht?",
+          "options": ["Sie gibt mehr Tests", "Sie singt mit den Schülern und erzählt Geschichten", "Sie macht die Schule zu"],
+          "correct": 1
+        },
+        {
+          "question": "Was bedeutet 'La Voz del Mar'?",
+          "options": ["Der Strand von Malaga", "Die Stimme des Meeres", "Der alte Hafen"],
+          "correct": 1
+        },
+        {
+          "question": "Wie hört Lena das Meer?",
+          "options": ["Mit den Ohren", "Mit dem Herzen", "Mit den Augen"],
+          "correct": 1
+        }
+      ]
+    }
+  }
 } 

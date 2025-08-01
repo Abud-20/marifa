@@ -45,6 +45,153 @@ const vocabulary = [
     wordAr: "خيار",
     image: "/Gurke.svg",
     pronunciation: "ˈɡʊʁkə"
+  },
+  {
+    id: 7,
+    wordDe: "Katze",
+    wordAr: "قط",
+    image: "/Katze hand.svg",
+    pronunciation: "ˈkatsə"
+  },
+  {
+    id: 8,
+    wordDe: "Park",
+    wordAr: "حديقة",
+    image: "/Homepage.svg",
+    pronunciation: "paʁk"
+  },
+  {
+    id: 9,
+    wordDe: "Bank",
+    wordAr: "مقعد",
+    image: "/Homepage.svg",
+    pronunciation: "baŋk"
+  },
+  {
+    id: 10,
+    wordDe: "schwarz",
+    wordAr: "أسود",
+    image: "/Homepage.svg",
+    pronunciation: "ʃvaʁts"
+  },
+  {
+    id: 11,
+    wordDe: "weiß",
+    wordAr: "أبيض",
+    image: "/Homepage.svg",
+    pronunciation: "vaɪs"
+  },
+  {
+    id: 12,
+    wordDe: "Anna",
+    wordAr: "آنا",
+    image: "/Homepage.svg",
+    pronunciation: "ˈana"
+  },
+  {
+    id: 13,
+    wordDe: "Supermarkt",
+    wordAr: "سوبر ماركت",
+    image: "/Homepage.svg",
+    pronunciation: "ˈzuːpɐˌmaʁkt"
+  },
+  {
+    id: 14,
+    wordDe: "Kasse",
+    wordAr: "صندوق",
+    image: "/Homepage.svg",
+    pronunciation: "ˈkasə"
+  },
+  {
+    id: 15,
+    wordDe: "Wasser",
+    wordAr: "ماء",
+    image: "/Homepage.svg",
+    pronunciation: "ˈvasɐ"
+  },
+  {
+    id: 16,
+    wordDe: "Euro",
+    wordAr: "يورو",
+    image: "/Homepage.svg",
+    pronunciation: "ˈɔɪʁo"
+  },
+  {
+    id: 17,
+    wordDe: "Tom",
+    wordAr: "توم",
+    image: "/Homepage.svg",
+    pronunciation: "toːm"
+  },
+  {
+    id: 18,
+    wordDe: "rot",
+    wordAr: "أحمر",
+    image: "/Homepage.svg",
+    pronunciation: "ʁoːt"
+  },
+  {
+    id: 19,
+    wordDe: "Wetter",
+    wordAr: "طقس",
+    image: "/Homepage.svg",
+    pronunciation: "ˈvɛtɐ"
+  },
+  {
+    id: 20,
+    wordDe: "kalt",
+    wordAr: "بارد",
+    image: "/Homepage.svg",
+    pronunciation: "kalt"
+  },
+  {
+    id: 21,
+    wordDe: "regnet",
+    wordAr: "ممطر",
+    image: "/Homepage.svg",
+    pronunciation: "ˈʁeːɡnət"
+  },
+  {
+    id: 22,
+    wordDe: "Mantel",
+    wordAr: "معطف",
+    image: "/Homepage.svg",
+    pronunciation: "ˈmantəl"
+  },
+  {
+    id: 23,
+    wordDe: "Regenschirm",
+    wordAr: "مظلة",
+    image: "/Homepage.svg",
+    pronunciation: "ˈʁeːɡənˌʃɪʁm"
+  },
+  {
+    id: 24,
+    wordDe: "Schule",
+    wordAr: "مدرسة",
+    image: "/Homepage.svg",
+    pronunciation: "ˈʃuːlə"
+  },
+  {
+    id: 25,
+    wordDe: "Freund",
+    wordAr: "صديق",
+    image: "/Homepage.svg",
+    pronunciation: "fʁɔɪnt"
+  },
+  {
+    id: 26,
+    wordDe: "Lisa",
+    wordAr: "ليزا",
+    image: "/Homepage.svg",
+    pronunciation: "ˈliːza"
+  },
+  {
+    id: 27,
+    wordDe: "Tim",
+    wordAr: "تيم",
+    image: "/Homepage.svg",
+    pronunciation: "tiːm"
   }
 ];
 

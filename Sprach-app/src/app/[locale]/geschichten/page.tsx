@@ -5,30 +5,22 @@ import { getTranslation } from "@/lib/i18n/translations";
 const stories = [
   {
     id: 1,
-    titleDe: "Die kleine Katze",
-    titleAr: "القط الصغير",
+    titleDe: "Anna und die Katze",
+    titleAr: "آنا والقط",
     level: "easy",
-    descriptionDe: "Eine süße Geschichte über eine kleine Katze, die Freunde findet.",
-    descriptionAr: "قصة جميلة عن قط صغير يجد أصدقاء."
+    descriptionDe: "Eine süße Geschichte über Anna und ihre Katze Max im Park.",
+    descriptionAr: "قصة جميلة عن آنا وقطها ماكس في الحديقة."
   },
   {
     id: 2,
-    titleDe: "Der Apfelbaum",
-    titleAr: "شجرة التفاح",
+    titleDe: "Anna und das rote Fahrrad",
+    titleAr: "آنا والدراجة الحمراء",
     level: "medium",
-    descriptionDe: "Ein Baum, der lernt, wie wichtig es ist, zu teilen.",
-    descriptionAr: "شجرة تتعلم أهمية المشاركة."
+    descriptionDe: "Eine inspirierende Geschichte über Anna, die hart arbeitet, um sich ihren Traum zu erfüllen.",
+    descriptionAr: "قصة ملهمة عن آنا التي تعمل بجد لتحقيق حلمها."
   },
   {
     id: 3,
-    titleDe: "Das Abenteuer im Garten",
-    titleAr: "المغامرة في الحديقة",
-    level: "medium",
-    descriptionDe: "Eine spannende Entdeckungsreise durch den Garten.",
-    descriptionAr: "رحلة استكشاف مثيرة في الحديقة."
-  },
-  {
-    id: 4,
     titleDe: "Die Farben des Regenbogens",
     titleAr: "ألوان قوس قزح",
     level: "hard",
@@ -47,7 +39,7 @@ export default async function Geschichten({ params }: GeschichtenProps) {
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'easy': return 'bg-green-500';
-      case 'medium': return 'bg-yellow-500';
+      case 'medium': return 'bg-blue-500';
       case 'hard': return 'bg-red-500';
       default: return 'bg-gray-500';
     }
@@ -62,6 +54,18 @@ export default async function Geschichten({ params }: GeschichtenProps) {
     }
   };
 
+  const getStoryLink = (story: any) => {
+    if (story.level === 'easy') {
+      return `/${locale}/geschichten/einfach`;
+    } else if (story.level === 'medium') {
+      return `/${locale}/geschichten/mittel`;
+    } else if (story.level === 'hard') {
+      return `/${locale}/geschichten/schwer`;
+    } else {
+      return `/${locale}/geschichten/${story.id}`;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-100 to-yellow-200 p-4">
       <div className="max-w-6xl mx-auto">
@@ -72,7 +76,7 @@ export default async function Geschichten({ params }: GeschichtenProps) {
         </div>
 
         {/* Stories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {stories.map((story) => (
             <div key={story.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="flex justify-between items-start mb-4">
@@ -89,17 +93,23 @@ export default async function Geschichten({ params }: GeschichtenProps) {
               </p>
               
               <div className="flex gap-2">
-                <button className="flex-1 bg-[#7a9d54] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#5e7d3a] transition">
+                <Link 
+                  href={getStoryLink(story)}
+                  className="flex-1 bg-[#7a9d54] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#5e7d3a] transition text-center"
+                >
                   {getTranslation(locale, 'stories', 'readStory')}
-                </button>
+                </Link>
                 <button className="flex-1 bg-[#9db975] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#7a9d54] transition">
                   {getTranslation(locale, 'stories', 'listenStory')}
                 </button>
               </div>
               
-              <button className="w-full mt-3 bg-orange-300 text-[#523529] py-2 px-4 rounded-lg font-semibold hover:bg-orange-400 transition">
+              <Link 
+                href={`/${locale}/bilder-erklarung`}
+                className="w-full mt-3 bg-orange-300 text-[#523529] py-2 px-4 rounded-lg font-semibold hover:bg-orange-400 transition block text-center"
+              >
                 {getTranslation(locale, 'stories', 'practiceWords')}
-              </button>
+              </Link>
             </div>
           ))}
         </div>
