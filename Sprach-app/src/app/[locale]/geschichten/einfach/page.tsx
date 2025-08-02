@@ -20,6 +20,17 @@ export default function Einfach({ params }: EinfachProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [readingProgress, setReadingProgress] = useState(0);
   const [isReading, setIsReading] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // Initialize locale from params and set client flag
+  useEffect(() => {
+    const initLocale = async () => {
+      const { locale: paramLocale } = await params;
+      setLocale(paramLocale);
+    };
+    initLocale();
+    setIsClient(true);
+  }, [params]);
 
   // Story keys for translation
   const storyKeys = ['anna', 'tom', 'lisa'];
@@ -103,6 +114,18 @@ export default function Einfach({ params }: EinfachProps) {
     setShowFeedback(false);
     setSelectedAnswer(null);
   };
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 p-4 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#4f46e5] mx-auto mb-4"></div>
+          <h1 className="text-2xl font-bold text-[#523529]">Loading...</h1>
+        </div>
+      </div>
+    );
+  }
 
   // Don't render if no story data
   if (!currentStoryData.title || !currentStoryData.paragraphs || !currentStoryData.questions) {

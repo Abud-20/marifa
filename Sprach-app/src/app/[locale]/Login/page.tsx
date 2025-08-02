@@ -28,6 +28,7 @@ export default function Login({ params }: LoginProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [showRepeatPassword, setShowRepeatPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   
   // Form data
   const [formData, setFormData] = useState<FormData>({
@@ -41,7 +42,12 @@ export default function Login({ params }: LoginProps) {
   const [errors, setErrors] = useState<FormErrors>({});
   
   useEffect(() => {
-    params.then(({ locale }) => setLocale(locale));
+    const initLocale = async () => {
+      const { locale: paramLocale } = await params;
+      setLocale(paramLocale);
+    };
+    initLocale();
+    setIsClient(true);
   }, [params]);
 
   // Handle input changes
@@ -124,6 +130,18 @@ export default function Login({ params }: LoginProps) {
     setShowPassword(false);
     setShowRepeatPassword(false);
   };
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-orange-100 to-amber-200 p-4 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+          <h1 className="text-2xl font-bold text-gray-800">Loading...</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-200 relative overflow-hidden">
@@ -279,7 +297,7 @@ export default function Login({ params }: LoginProps) {
                   disabled={isLoading}
                 />
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-                  👤
+                  ��
                 </div>
                 {errors.name && (
                   <p className="text-red-500 text-sm mt-1 flex items-center">

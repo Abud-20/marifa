@@ -11,12 +11,30 @@ interface UberUnsProps {
 export default function UberUns({ params }: UberUnsProps) {
   const [locale, setLocale] = useState<Locale>('de');
   const [isVisible, setIsVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   
   useEffect(() => {
-    params.then(({ locale }) => setLocale(locale));
+    const initLocale = async () => {
+      const { locale: paramLocale } = await params;
+      setLocale(paramLocale);
+    };
+    initLocale();
+    setIsClient(true);
     // Trigger animation after component mounts
     setTimeout(() => setIsVisible(true), 100);
   }, [params]);
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <h1 className="text-2xl font-bold text-gray-800">Loading...</h1>
+        </div>
+      </div>
+    );
+  }
 
     return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 relative overflow-hidden">

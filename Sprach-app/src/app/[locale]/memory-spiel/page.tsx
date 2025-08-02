@@ -10,6 +10,7 @@ type MemoryGameProps = {
 
 export default function MemoryGame({ params }: MemoryGameProps) {
   const [locale, setLocale] = useState<Locale>('de');
+  const [isClient, setIsClient] = useState(false);
   const t = getTranslations(locale, 'memory') as Record<string, string>;
   
   // Bildpfade statt Emojis
@@ -93,13 +94,20 @@ export default function MemoryGame({ params }: MemoryGameProps) {
     }
   }, [cards, isGameActive, elapsedTime, bestTime]);
 
-  // Load best time from localStorage
+  // Load best time from localStorage and initialize locale
   useEffect(() => {
+    const initLocale = async () => {
+      const { locale: paramLocale } = await params;
+      setLocale(paramLocale);
+    };
+    initLocale();
+    setIsClient(true);
+    
     const savedBestTime = localStorage.getItem('memoryBestTime');
     if (savedBestTime) {
       setBestTime(parseInt(savedBestTime));
     }
-  }, []);
+  }, [params]);
 
   const formatTime = (seconds: number): string => {
     const mins = Math.floor(seconds / 60);
@@ -165,6 +173,18 @@ export default function MemoryGame({ params }: MemoryGameProps) {
 
   // Check if game is won
   const isGameWon = cards.every(card => card.matched) && isGameActive && elapsedTime > 0;
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 p-4 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+          <h1 className="text-2xl font-bold text-white">Loading...</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative flex flex-col items-center min-h-screen p-2 sm:p-4 pt-8 overflow-hidden">

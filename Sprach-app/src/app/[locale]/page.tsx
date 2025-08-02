@@ -13,9 +13,15 @@ export default function Home({ params }: HomeProps) {
   const [locale, setLocale] = useState<Locale>('de');
   const [isVisible, setIsVisible] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    params.then(({ locale }) => setLocale(locale));
+    const initLocale = async () => {
+      const { locale: paramLocale } = await params;
+      setLocale(paramLocale);
+    };
+    initLocale();
+    setIsClient(true);
     setTimeout(() => setIsVisible(true), 100);
     
     // Update time every second
@@ -57,6 +63,18 @@ export default function Home({ params }: HomeProps) {
     };
     return fallbacks[key]?.[locale] || key;
   };
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 p-4 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#4f46e5] mx-auto mb-4"></div>
+          <h1 className="text-2xl font-bold text-[#523529]">Loading...</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -114,10 +132,10 @@ export default function Home({ params }: HomeProps) {
       <main className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-120px)] px-4">
         {/* Welcome Section */}
         <div className={`text-center mb-8 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-3xl md:text-5xl bg-white/ backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-3xl text-gray-800 drop-shadow-lg max-w-2xl mx-auto font-bold text-gray-800 mb-4 drop-shadow-2xl">
-            {locale === 'de' ? 'Willkommen bei Maarifa!' : 'مرحباً بكم في معرفة!'}
+          <h2 className="text-3xl md:text-5xl bg-white/ backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-1 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-3xl text-gray-800 drop-shadow-lg max-w-2xl mx-auto font-bold text-gray-800 mb-4 drop-shadow-2xl">
+            {locale === 'de' ? 'Willkommen bei Marifa!' : 'مرحباً بكم في معرفة!'}
           </h2>
-          <p className="text-lg md:text-xl bg-white/ backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-3xl text-gray-800 drop-shadow-lg max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl bg-white/30 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border-1 border-orange-200 hover:border-orange-400 transition-all duration-300 hover:scale-105 hover:shadow-3xl text-gray-800 drop-shadow-lg max-w-2xl mx-auto">
             {locale === 'de' 
               ? 'Entdecke die faszinierende Welt des Sprachenlernens mit interaktiven Spielen, spannenden Geschichten und innovativen Lernmethoden' 
               : 'اكتشف عالم تعلم اللغات المذهل من خلال الألعاب التفاعلية والقصص المثيرة وطرق التعلم المبتكرة'
