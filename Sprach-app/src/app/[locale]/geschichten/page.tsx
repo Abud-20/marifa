@@ -71,7 +71,7 @@ export default async function Geschichten({ params }: GeschichtenProps) {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-[#523529] mb-4">{getTranslation(locale, 'stories', 'title')}</h1>
+          <h1 className="text-4xl font-bold text-[#523529] mb-5">{getTranslation(locale, 'stories', 'title')}</h1>
           <p className="text-xl text-[#523529] max-w-2xl mx-auto">{getTranslation(locale, 'stories', 'subtitle')}</p>
         </div>
 
