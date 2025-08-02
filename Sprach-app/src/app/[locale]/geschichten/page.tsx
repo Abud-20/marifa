@@ -103,13 +103,6 @@ export default async function Geschichten({ params }: GeschichtenProps) {
                   {getTranslation(locale, 'stories', 'listenStory')}
                 </button>
               </div>
-              
-              <Link 
-                href={`/${locale}/bilder-erklarung`}
-                className="w-full mt-3 bg-orange-300 text-[#523529] py-2 px-4 rounded-lg font-semibold hover:bg-orange-400 transition block text-center"
-              >
-                {getTranslation(locale, 'stories', 'practiceWords')}
-              </Link>
             </div>
           ))}
         </div>
